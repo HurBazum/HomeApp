@@ -17,9 +17,6 @@
                 Text="{x:Static local:LoginPage.BUTTON_TEXT}"
                 Clicked="Login_Click"
                 CornerRadius="{customStyles:ButtonViewExtension ButtonStyle = Round}"/>
-            <Label x:Name="errorMessage" FontSize="Small" TextColor="{customStyles:ColorFromRGBExtention Red=201, Green=134, Blue=122}"
-                   Padding="30,10,30,10" VerticalTextAlignment="Center"
-                   HorizontalTextAlignment="Center"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
