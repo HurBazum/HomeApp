@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -14,7 +9,8 @@ namespace HomeApp.Views
 	{
 		public TestPage ()
         {
-            Content = GetStackLayout();
+            InitializeComponent();
+            GetStackLayout();
         }
 
         #region get elements
@@ -32,7 +28,7 @@ namespace HomeApp.Views
                 {
                     Spans =
                     {
-                        new Span() { Text = "Learn mare at" },
+                        new Span() { Text = "Learn more at" },
                         new Span() { Text = $"{Environment.NewLine}" },
                         new Span() { Text = "https://aka.ms/xamarin-quickstart", FontAttributes = FontAttributes.Bold }
                     }
@@ -47,28 +43,46 @@ namespace HomeApp.Views
         {
             Button button = new Button()
             {
-                Text = "OK"
+                Text = "CHANGE IT"
+            };
+
+            // удаляет и добавляет элементы на странице
+            button.Clicked += (s, e) =>
+            {
+                if (!(s is Button b))
+                {
+                    return;
+                }
+
+                if (testStack.Children[0] != b)
+                {
+                    testStack.Children.RemoveAt(0);
+                    ChangePage();
+                }
+                else
+                {
+                    testStack.Children.RemoveAt(1);
+                    testStack.Children.Insert(0, GetLabel());
+                }
             };
 
             return button;
         }
 
-        StackLayout GetStackLayout()
+        void GetStackLayout()
         {
-            var stack = new StackLayout()
-            {
-                Spacing = 20,
-                VerticalOptions = LayoutOptions.Center,
-                Children =
-                {
-                    GetLabel(),
-                    GetButton()
-                }
-            };
-
-            return stack;
+            testStack.Children.Add(GetLabel());
+            testStack.Children.Add(GetButton());
         }
 
+        #endregion
+
+        #region change elements
+        void ChangePage()
+        {
+            testStack.Children.Add(
+                new Label { Text = "Вы нажали на кнопку!", HorizontalTextAlignment = TextAlignment.Center });
+        }
         #endregion
     }
 }

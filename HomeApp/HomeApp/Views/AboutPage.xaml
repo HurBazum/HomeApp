@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HomeApp.Views.AboutPage">
+    <RelativeLayout x:Name="container" BackgroundColor="Maroon">
+        <BoxView x:Name="boxView" WidthRequest="50" HeightRequest="50"
+                 Color="LightBlue" 
+                 RelativeLayout.XConstraint="{ConstraintExpression
+                                                Type=RelativeToParent,
+                                                Property=Width,     
+                                                Factor=0.5, 
+                                                Constant=-25}" 
+                 RelativeLayout.YConstraint="{ConstraintExpression
+                                                Type=RelativeToParent,
+                                                Property=Height,
+                                                Factor=0.5,
+                                                Constant=-25}"/>
+        <BoxView x:Name="rightBoxView" WidthRequest="50" HeightRequest="50"
+                 Color="AliceBlue"
+                 RelativeLayout.XConstraint="{ConstraintExpression
+                                                Type=RelativeToParent,
+                                                Property=Width,     
+                                                Factor=0.5, 
+                                                Constant=35}"
+                 RelativeLayout.YConstraint="{ConstraintExpression
+                                                Type=RelativeToParent,
+                                                Property=Height,
+                                                Factor=0.5,
+                                                Constant=-25}"/>
+        <BoxView x:Name="leftBoxView" WidthRequest="50" HeightRequest="50"
+         Color="CornflowerBlue"
+         RelativeLayout.XConstraint="{ConstraintExpression
+                                        Type=RelativeToParent,
+                                        Property=Width,     
+                                        Factor=0.5, 
+                                        Constant=-85}"
+         RelativeLayout.YConstraint="{ConstraintExpression
+                                        Type=RelativeToParent,
+                                        Property=Height,
+                                        Factor=0.5,
+                                        Constant=-25}"/>         
+    </RelativeLayout>
+</ContentPage>

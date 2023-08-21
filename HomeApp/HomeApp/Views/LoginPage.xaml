@@ -3,10 +3,11 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:HomeApp.Views"
              xmlns:customStyles="clr-namespace:HomeApp.Infrastructure.Extensions"
-             x:Class="HomeApp.Views.LoginPage">
+             x:Class="HomeApp.Views.LoginPage"
+             BackgroundColor="Azure">
     
     <ContentPage.Content>
-        <StackLayout x:Name="stackLayout" VerticalOptions="Center" HorizontalOptions="Center">
+        <StackLayout x:Name="stackLayout" VerticalOptions="CenterAndExpand" WidthRequest="400" Spacing="10" Orientation="Vertical" HorizontalOptions="Center">
             <Label Text="HomeApp - Ваш умный дом" 
                    FontSize="Title"
                    Padding="30,10,30,10" 
@@ -15,8 +16,12 @@
             <Button
                 x:Name="loginButton"
                 Text="{x:Static local:LoginPage.BUTTON_TEXT}"
+                FontSize="Subtitle"
                 Clicked="Login_Click"
-                CornerRadius="{customStyles:ButtonViewExtension ButtonStyle = Round}"/>
+                CornerRadius="{customStyles:ButtonViewExtension ButtonStyle = SemiRound}"
+                BackgroundColor="{customStyles:ColorFromRGBExtention Red=74, Green=193, Blue=81}"/>
+            <Label x:Name="infoMessage" FontSize="Micro" Padding="30,10,30,10" 
+                   VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
