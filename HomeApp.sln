@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomeApp.Android", "HomeApp\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomeApp.iOS", "HomeApp\HomeApp.iOS\HomeApp.iOS.csproj", "{69209AB9-A833-4DE1-87F3-F07979BBAED4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomeApp", "HomeApp\HomeApp\HomeApp.csproj", "{AEC5B1CA-91DA-419E-AA48-8F51CC2F4F6C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HomeApp", "HomeApp\HomeApp\HomeApp.csproj", "{AEC5B1CA-91DA-419E-AA48-8F51CC2F4F6C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,13 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
+
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="HomeApp.Views.RegisterPage">
+             x:Class="HomeApp.Views.RegisterPage"
+             BackgroundImageSource="HomeBackGround.jpg">
     <ContentPage.Content>
-        <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
-            <Entry x:Name="registerEntry" Placeholder="enter your e-mail"/>
-            <Button x:Name="registerButton" Text="REGISTER" Clicked="RegisterButton_Clicked"/>
-            <Label x:Name="errorMessage" TextColor="Red"/>
-            <Label x:Name="eventMessage" TextColor="Violet" />
+        
+        <StackLayout HorizontalOptions="Center" VerticalOptions="Center" WidthRequest="300" >
+            
+            <Entry x:Name="registerEntry" Placeholder="enter your e-mail" PlaceholderColor="AliceBlue" TextColor="AliceBlue" HorizontalTextAlignment="Center"/>
+            <Button x:Name="registerButton" Text="REGISTER" Clicked="RegisterButton_Clicked" BackgroundColor="Aquamarine"/>
+            <Label x:Name="errorMessage" TextColor="Red" HorizontalTextAlignment="Center" />
+            <Label x:Name="eventMessage" TextColor="Violet" HorizontalTextAlignment="Center" />
+            
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
